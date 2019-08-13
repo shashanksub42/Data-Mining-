@@ -14,7 +14,7 @@ The missing values were filled with the maximum value counts of each column.
   - **One-hot encoding:** In this technique, if there are three separate categories in a particular column, then it creates three different columns, one for each category, and then fills it in with 1s or 0s. 
   - **Label Encoding:** In this technique, a new integer is assigned for every other category. No new columns are created. Ex: if a column has three categories: Red, Green and Blue. Then {Red : 0, Green : 1, Blue : 2}
   
-Once we have made the numerical conversions, we can merge the new categorical clean dataset with the numerical clean dataset.
+Once we have made the numerical conversions, we can merge the new categorical clean dataset with the numerical clean dataset. We used Label Encoding as our final encoding technique for our model. The main reason for this was that there was a category called 'Vehicle Make' which consisted of different car brand names. There were 96 different categories in this column, and so if we had used one-hot encoding, we would have had 96 extra columns. 
   
 ### 4. Selecting Features:
 We used a technique called Recursive Feature Elimination, which recursively removes features, builds a model using the remaining attributes and calculates model accuracy. RFE is able to work out the combination of attributes that contribute to the prediction on the target variable (or class). Out of the 35 features, we selected the top 25 which would contribute most to the final accuracy. We also achieved a ranking of the features based on their importance. 
